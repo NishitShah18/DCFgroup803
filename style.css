@@ -1,0 +1,171 @@
+/*
+< !-- 
+--- GROUP ASSIGNMENT ---
+
+Section: DCF255-NFF
+
+Date: 12th August, 2022
+
+Academic Policy:
+We declare that the attached project is our own work in accordance with Seneca Academic Policy. No part 
+of this assignment has been copied manually or electronically from any other source or distributed to other 
+students.
+
+About Group-803:
+I, Nishit Shah, am the Leader of this group. The taskes, I assigned to my group members, are following:
+WebSite : Nishit
+Report  : Om and Harsh
+
+My Group Members:
+Nishit Shah  [130 176 217]
+Om Sharma  [139 269 211]
+Harsh Sethi [121 889 216]
+-->
+*/
+body {
+    background-image: linear-gradient(to bottom right, rgb(226, 124, 207),
+            rgb(228, 131, 214));
+    color: rgb(221, 221, 221);
+    font-family: "Comic Sans MS";
+}
+
+.hvr-grow {
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.03);
+}
+
+h1 {
+    text-align: center;
+    font-size: 55px;
+    color: rgb(19, 16, 16);
+}
+
+h2 {
+    font-size: 30px;
+    margin-left: 40px;
+    color: #89fdff;
+}
+
+b {
+    font-size: 20px;
+    color: #89fdff;
+}
+
+p {
+    text-align: justify;
+    font-size: 20px;
+    margin: 40px;
+}
+
+.button-css {
+    position: relative;
+    left: 60px;
+    max-width: 300px;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    will-change: transform;
+}
+
+.button-css:disabled {
+    pointer-events: none;
+}
+
+.button-css:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-css:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.content {
+    background: linear-gradient(rgb(77, 81, 154),
+            rgb(60, 118, 164));
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px #89fdff, 0 0 25px #89fdff, 0 0 5px #89fdff;
+    max-width: 1024px;
+    margin: 20px auto 50px;
+    padding: 50px;
+}
+
+.images {
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px #4bb3d9, 0 0 25px #4bb3d9, 0 0 5px #4bb3d9;
+    border-radius: 20px;
+    margin: 20px 40px 20px 40px;
+    width: 640px;
+    height: 360px;
+}
+
+#video {
+    border: solid #89fdff 4px;
+    border-radius: 20px;
+    float: right;
+    margin: 20px 40px 20px 40px;
+    width: 640px;
+    height: 360px;
+}
+
+#sources {
+    font-size: 20px;
+}
+
+a {
+    font-family: helvetica;
+    text-decoration: none;
+    color: #ff51ff;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+.footer {
+    background: linear-gradient(rgb(198, 0, 198),
+            rgb(119, 0, 148));
+    width: 100%;
+    padding: 20px;
+    color: #33d6ff;
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 20px auto 50px;
+    border-radius: 25px;
+    box-shadow: 1px 1px 2px #89fdff, 0 0 25px #89fdff, 0 0 5px #89fdff;
+}

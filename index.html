@@ -1,0 +1,235 @@
+<!--
+--- GROUP ASSIGNMENT ---
+
+Section: DCF255-NFF
+
+Date: 12th August, 2022
+
+Academic Policy:
+We declare that the attached project is our own work in accordance with Seneca Academic Policy. No part 
+of this assignment has been copied manually or electronically from any other source or distributed to other 
+students.
+
+About Group-803:
+I, Nishit Shah, am the Leader of this group. The taskes, I assigned to my group members, are following:
+WebSite : Nishit
+Report  : Om and Harsh
+
+My Group Members:
+Nishit Shah  [130 176 217]
+Om Sharma  [139 269 211]
+Harsh Sethi [121 889 216]
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Software Defined Networking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Dynamic Host Configuration Protocol (DHCP)</h1>
+
+    <div class="navigation">
+        <button class="button-css" id="bttn-a">What is DHCP?</button>
+        <button class="button-css" id="bttn-b">Why use DHCP?</button>
+        <button class="button-css" id="bttn-c">How does DHCP work?</button>
+        <button class="button-css" id="bttn-d">References</button>
+    </div>
+
+    <br><br>
+
+    <div class="content hvr-grow" id="what-is-dhcp">
+        <h2>What is Dynamic Host Configuration Protocol?</h2>
+        <p>
+            Dynamic Host Configuration Protocol (DHCP) is based on client-server protocol which provides an Internet
+            Protocol (IP)
+            address automatically to the devices which want to make connection with a server. Thus, Dynamic Host
+            Configuration
+            Protocol (DHCP) is an application layer protocol which is used to provide:
+        </p>
+        <img src="media\Picture1.png" class="images" style="float: right; position: relative; top: -15px">
+        <p>
+            <b>1.</b> Subnet Mask<br>
+            <b>2.</b> Router Address<br>
+            <b>3.</b> DNS Address<br>
+            <b>4.</b> Vendor Class Identifier<br>
+        </p>
+        <p>
+            According to RFCs 2131 and 2132, the Internet Engineering Task Force (IETF) defines DHCP as a standard built
+            on the
+            Bootstrap Protocol (BOOTP), a protocol that DHCP shares many implementation specifics with. A DHCP server
+            can provide
+            host devices with the necessary TCP/IP setup data. Windows 2016 server also includes DHCP server which is an
+            optional
+            network server and can be used to lease IP addresses and other information to establish successful
+            connection. DHCP is
+            also based on discovery, offer, request, and ACK.
+        </p>
+        <p>
+            In the above diagram, We can notice that DHCP server takes help of IP address database to generate a range
+            on IP
+            addresses and then assigns those addresses to the hosts with help of IP router.
+            DHCP port numbers are 67 for the server and 68 for the client. It employs UDP services and is a
+            client-server protocol.
+            A pool of addresses is used to assign IP addresses. The DHCP connection process, also known as the DORA
+            process,
+            involves the client and server exchanging 8 DHCP messages, though mostly 4 DHCP messages.
+        </p>
+        <br>
+    </div>
+    <div class="content hvr-grow" id="why-use-dhcp">
+        <h2>Advantages of using DHCP:</h2>
+
+        <p>
+            <b>a.</b> It offers centralized management of IP addresses.</br></br>
+            <b>b.</b> New host devices can easily added to the connection while the computers which are no longer
+            connected can
+            be removed
+            from server connection.</br></br>
+            <b>c.</b> Without having to reconfigure every client, DHCP server's IP address space may be easily
+            changed.</br></br>
+            <b>d.</b> Automatic management of IP addresses, including the prevention of duplicate IP address
+            problems.</br></br>
+            <b>e.</b> Allows support for BOOTP clients, so you can easily transition your networks from BOOTP to
+            DHCP.</br></br>
+            <b>f.</b> Allows the administrator to set lease times, even on manually allocated IP addresses.</br></br>
+            <b>g.</b> Allows limiting which MAC addresses are served with dynamic IP addresses.</br></br>
+            <b>h.</b> Allows the administrator to configure additional DHCP option types, over and above what is
+            possible
+            with
+            BOOTP.</br></br>
+            <b>i.</b> Allows the definition of the pool or pools of IP addresses that can be allocated dynamically. A
+            user might
+            have a server
+            that forces the pool to be a whole subnet or network. The server should not force such a pool to consist of
+            contiguous
+            IP addresses.</br></br>
+            <b>j.</b> Allows the association of two or more dynamic IP address pools on separate IP networks (or
+            subnets). This is
+            the basic
+            support for secondary networks. It allows a router to act as a BOOTP relay for an interface which has more
+            than one IP
+            network or subnet IP address.</br></br>
+        </p>
+    </div>
+
+    <div class="content hvr-grow" id="how-does-dhcp-work">
+        <h2>How Does Software Defined Networking Work?</h2>
+
+        <img src="./media/Picture2.png" class="images" style="float: left; ">
+        <p>
+            <b>1. DHCP discover message:</b><br><br>
+            This is the initial message produced throughout the server and client's communication process. To find out
+            whether a
+            network has any DHCP servers or servers at all, the client host generates this message. To locate the DHCP
+            server, this
+            message is broadcast to all connected devices in the network. The size of this message is 342 or 576 bytes.
+        </p>
+        <img src="./media/Picture3.png" class="images" style="float: right; ">
+        <p>
+            <b>2. DHCP offer message:</b><br><br>
+
+            The unleased IP address and other TCP configuration details will be supplied by the server in its response
+            to host in
+            this message. The server is broadcasting this message. The message is 342 bytes in size. The client host
+            will take the
+            first DHCP OFFER message it gets if there are many DHCP servers available in the network. In order to
+            identify the
+            server, a server ID is also supplied in the packet.
+        </p>
+        <img src="./media/Picture4.png" class="images" style="float: left; ">
+        <p>
+            <b>3. DHCP request message:</b><br><br>
+
+            A client will broadcast a DHCP request message in response to an offer message it has received. The client
+            will do a
+            free ARP to see whether any other hosts with the same IP address are already present on the network. If no
+            other host
+            responds, there are no hosts in the network with the identical TCP configuration, and the message is sent to
+            the server
+            to indicate that the IP address has been accepted. This message also includes a Client ID.
+        </p>
+
+        <iframe src="https://www.youtube.com/embed/S43CFcpOZSI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen id="video"></iframe>
+        <p>
+            In conclusion, DHCP is a protocol that allows mobile hosts, such as notebook PCs, to access network
+            resources. Security is not taken
+            into account in the present DHCP protocol. Each client can utilise the network if the client configures
+            network
+            resources such as IP address. Furthermore, contemporary DHCP servers assign network resources to any client
+            who makes a
+            request. To address these issues, the IETF has suggested an authentication technique for the DHCP message,
+            which is also
+            available as an Internet Draft. However, this solution simply authenticates DHCP messages between the server
+            and
+            clients, and therefore ignores the necessity for client-level access control. On the basis of this
+            technique, DAG has
+            been constructed and assessed as an access control gateway. Only authorised clients received network
+            resources from an
+            authenticated DHCP server. DAG's access control is based on the DHCP ACK message's allotted information for
+            a client.
+        </p>
+    </div>
+
+    <div class="content hvr-grow" id="references">
+        <h2>References</h2>
+        <ul id="sources">
+            <li><a href="https://www.geeksforgeeks.org/dynamic-host-configuration-protocol-dhcp/" target="_blank">Geeks
+                    For Geeks</a></li>
+            <li><a href="https://www.efficientip.com/what-is-dhcp-and-why-is-it-important/"
+                    target="_blank">EfficientIP</a></li>
+            <li><a href="https://www.youtube.com/watch?v=S43CFcpOZSI&feature=youtu.be" target="_blank">Youtube</a></li>
+            <li><a href="https://bluecatnetworks.com/glossary/what-is-dhcp/" target="_blank">BlueCat</a></li>
+            <li><a href="https://www.networkworld.com/article/3299438/dhcp-defined-and-how-it-works.html"
+                    target="_blank">NetworkWorld</a></li>
+            <li><a href="https://www.cloudns.net/blog/dhcp-server/" target="_blank">CloudNS</a></li>
+            <li><a href="https://www.lifewire.com/chromebooks-vs-tablets-832349" target="_blank">LifeWire</a></li>
+            <li><a href="https://crnetpackets.com/2017/04/24/ipv4-basics-part-1-dhcp-dynamic-host-configuration-protocol/"
+                    target="_blank">CRnetPACKETS</a></li>
+        </ul>
+    </div>
+
+
+    <div class="footer">
+        <br>
+        <div style="text-align: center; font-size:0.75cm;">--- GROUP ASSIGNMENT ---</div>
+        <br>
+        <ul>
+            <li>DCF255-NFF</li>
+            <li>12<sup>th</sup> August, 2022</li>
+            <li>
+                We declare that the attached project is our own work in accordance with Seneca Academic Policy.
+                No part of this assignment has been copied manually or electronically from any other source or
+                distributed to other students.
+            </li>
+            <li>
+                I, Nishit Shah, am the Leader of this group. The taskes, I assigned to my group members, are following:
+                <ul>
+                    <li>WebSite : Nishit</li>
+                    <li>Report &nbsp;: Om and Harsh</li>
+                </ul>
+            </li>
+            <li>
+                Group-803 Members:
+                <ul>
+                    <li>Nishit Shah &nbsp;[130 176 217]</li>
+                    <li>Om Sharma &nbsp;[139 269 211]</li>
+                    <li>Harsh Sethi [121 889 216]</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
